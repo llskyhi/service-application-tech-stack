@@ -1,7 +1,8 @@
 quarkus:
   profile:
     - dev
-    - datasource-credential-password
+    # - datasource-credential-password
+    - datasource-credential-vault
   datasource:
     db-kind: postgresql
     jdbc:
@@ -9,3 +10,13 @@ quarkus:
   hibernate-orm:
     schema-management:
       strategy: drop-and-create
+  vault:
+    url: ${SATS_OPENBAO_ADDR}
+    authentication:
+      # app-role:
+      #   role-id:
+      #   secret-id:
+      # userpass:
+      #   username: sats
+      #   password:
+      client-token: ${SATS_OPENBAO_DEV_TOKEN}

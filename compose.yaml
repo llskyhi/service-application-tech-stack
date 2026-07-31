@@ -8,3 +8,8 @@ services:
       - POSTGRES_DB=sats
     ports:
       - 5432:5432
+  openbao:
+    image: openbao/openbao
+    container_name: sats-openbao
+    ports:
+      - 8200:8200
