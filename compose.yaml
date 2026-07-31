@@ -1,0 +1,10 @@
+name: service-application-tech-stack
+services:
+  postgres:
+    image: postgres:18.4
+    container_name: sats-postgres
+    environment:
+      - POSTGRES_PASSWORD=${SATS_POSTGRES_PASSWORD:-pass}
+      - POSTGRES_DB=sats
+    ports:
+      - 5432:5432
