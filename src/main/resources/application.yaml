@@ -1,0 +1,11 @@
+quarkus:
+  profile:
+    - dev
+    - datasource-credential-password
+  datasource:
+    db-kind: postgresql
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/sats
+  hibernate-orm:
+    schema-management:
+      strategy: drop-and-create

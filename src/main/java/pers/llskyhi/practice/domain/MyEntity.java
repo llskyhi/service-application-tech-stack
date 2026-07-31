@@ -3,6 +3,7 @@ package pers.llskyhi.practice.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.ToString;
 
 /**
  * Example JPA entity.
@@ -23,6 +24,7 @@ import jakarta.persistence.Id;
  * }
  */
 @Entity
+@ToString
 public class MyEntity {
     @Id
     @GeneratedValue
