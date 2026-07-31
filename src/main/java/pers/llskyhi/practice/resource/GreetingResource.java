@@ -1,4 +1,4 @@
-package pers.llskyhi.practice;
+package pers.llskyhi.practice.resource;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

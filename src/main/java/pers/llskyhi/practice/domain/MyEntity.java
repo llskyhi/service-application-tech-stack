@@ -1,4 +1,4 @@
-package pers.llskyhi.practice;
+package pers.llskyhi.practice.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
