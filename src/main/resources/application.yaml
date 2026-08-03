@@ -10,6 +10,7 @@ quarkus:
   hibernate-orm:
     schema-management:
       strategy: drop-and-create
+  # https://docs.quarkiverse.io/quarkus-vault/dev/index.html
   vault:
     url: ${SATS_OPENBAO_ADDR}
     authentication:
