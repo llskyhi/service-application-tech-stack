@@ -16,7 +16,8 @@ quarkus:
       # app-role:
       #   role-id:
       #   secret-id:
-      # userpass:
-      #   username: sats
-      #   password:
-      client-token: ${SATS_OPENBAO_DEV_TOKEN}
+      userpass:
+        auth-mount-path: sats-userpass
+        username: sats-user
+        password: sats-pass
+      # client-token: ${SATS_OPENBAO_DEV_TOKEN}
