@@ -14,11 +14,12 @@ quarkus:
   vault:
     url: ${SATS_OPENBAO_ADDR}
     authentication:
-      # app-role:
-      #   role-id:
-      #   secret-id:
-      userpass:
-        auth-mount-path: sats-userpass
-        username: sats-user
-        password: sats-pass
+      app-role:
+        auth-mount-path: sats-approle
+        role-id: 01234567-89ab-cdef-0123-4567890abcde
+        secret-id: edcba098-7654-3210-fedc-ba9876543210
+      # userpass:
+      #   auth-mount-path: sats-userpass
+      #   username: sats-user
+      #   password: sats-pass
       # client-token: ${SATS_OPENBAO_DEV_TOKEN}
