@@ -15,4 +15,4 @@ bao auth enable \
 bao write \
     "auth/$userpass_mount_path/users/$userpass_username" \
     password="$userpass_password" \
-    policies="$policy_name"
+    token_policies="$policy_name"

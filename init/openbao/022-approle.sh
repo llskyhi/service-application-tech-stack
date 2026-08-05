@@ -18,7 +18,7 @@ bao auth enable \
 bao write \
     -f \
     "auth/$approle_mount_path/role/$sats_role_name" \
-    policies="$policy_name"
+    token_policies="$policy_name"
 
 # Specify fixed role_id/secret_id, for this project's demo purpose.
 # https://openbao.org/api-docs/auth/approle/#update-approle-role-id
