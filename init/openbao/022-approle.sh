@@ -4,8 +4,8 @@
 policy_name=sats-policy
 approle_mount_path='sats-approle'
 sats_role_name='sats-role'
-sats_role_id='01234567-89ab-cdef-0123-4567890abcde'
-sats_secret_id='edcba098-7654-3210-fedc-ba9876543210'
+sats_role_id='01234567-89ab-cdef-0123-456789abcdef'
+sats_secret_id='fedcba98-7654-3210-fedc-ba9876543210'
 
 bao auth enable \
     -path="$approle_mount_path" \

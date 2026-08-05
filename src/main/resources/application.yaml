@@ -16,8 +16,8 @@ quarkus:
     authentication:
       app-role:
         auth-mount-path: sats-approle
-        role-id: 01234567-89ab-cdef-0123-4567890abcde
-        secret-id: edcba098-7654-3210-fedc-ba9876543210
+        role-id: 01234567-89ab-cdef-0123-456789abcdef
+        secret-id: fedcba98-7654-3210-fedc-ba9876543210
       # userpass:
       #   auth-mount-path: sats-userpass
       #   username: sats-user
