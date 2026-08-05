@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Enable secret engine, set secrets.
+# Enable KV secret engine, set secrets.
 
 kv_path='sats/kv'
 secret_key='db'

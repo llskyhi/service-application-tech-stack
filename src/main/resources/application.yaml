@@ -9,7 +9,7 @@ quarkus:
       url: jdbc:postgresql://localhost:5432/sats
   hibernate-orm:
     schema-management:
-      strategy: drop-and-create
+      strategy: update
   # https://docs.quarkiverse.io/quarkus-vault/dev/index.html
   vault:
     url: ${SATS_OPENBAO_ADDR}

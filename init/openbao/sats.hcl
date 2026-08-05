@@ -3,3 +3,6 @@
 path "sats/kv/data/*" {
     capabilities = ["read"]
 }
+path "sats/database/creds/sats-database-role" {
+    capabilities = ["read"]
+}
