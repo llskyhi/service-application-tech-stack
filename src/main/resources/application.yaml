@@ -13,6 +13,10 @@ quarkus:
   # https://docs.quarkiverse.io/quarkus-vault/dev/index.html
   vault:
     url: ${SATS_OPENBAO_ADDR}
+    # The (only) KV secret engine mount path.
+    # Seems currently it's not allowed to use multiple KV engine path;
+    # but it may be reasonable to organize all secrets used by an application in single KV engine?
+    kv-secret-engine-mount-path: sats/kv
     authentication:
       app-role:
         auth-mount-path: sats-approle
