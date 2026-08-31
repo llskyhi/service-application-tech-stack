@@ -4,7 +4,9 @@ quarkus:
     # - datasource-credential-password
     - datasource-credential-vault
     - authentication-oidc
-    - authentication-oidc-credential-environment-variables
+    # - authentication-oidc-credential-environment-variables
+    # - authentication-oidc-credential-vault-credentials-provider
+    - authentication-oidc-credential-vault-secret-config
   datasource:
     db-kind: postgresql
     jdbc:

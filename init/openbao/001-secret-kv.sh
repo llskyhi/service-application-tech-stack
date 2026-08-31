@@ -2,7 +2,9 @@
 # Enable KV secret engine, set secrets.
 
 kv_path='sats/kv'
-secret_key='db'
+secret_key_db='db'
+secret_key_oidc_client='oidc-client'
+sats_oidc_client_secret='sats-client-secret'
 
 # using KV v2
 
@@ -15,9 +17,14 @@ bao secrets tune \
     "$kv_path"
 bao kv put \
     -mount="$kv_path" \
-    "$secret_key" \
+    "$secret_key_db" \
     username=postgres \
     password=pass
+
+bao kv put \
+    -mount="$kv_path" \
+    "$secret_key_oidc_client" \
+    "client-secret=$sats_oidc_client_secret"
 
 # sample commands that can be used to check result
 #bao kv list \
