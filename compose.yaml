@@ -15,3 +15,13 @@ services:
       - 8200:8200
     environment:
       - BAO_DEV_ROOT_TOKEN_ID=${SATS_OPENBAO_DEV_TOKEN}
+  # https://www.keycloak.org/getting-started/getting-started-docker
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.6.4
+    container_name: sats-keycloak
+    ports:
+      - 8070:8080
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${SATS_KEYCLOAK_ADMIN_USERNAME}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${SATS_KEYCLOAK_ADMIN_PASSWORD}
+    command: start-dev

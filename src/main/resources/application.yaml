@@ -3,6 +3,8 @@ quarkus:
     - dev
     # - datasource-credential-password
     - datasource-credential-vault
+    - authentication-oidc
+    - authentication-oidc-credential-environment-variables
   datasource:
     db-kind: postgresql
     jdbc:
@@ -10,6 +12,18 @@ quarkus:
   hibernate-orm:
     schema-management:
       strategy: update
+  http:
+    auth:
+      permission:
+        sats-public:
+          paths: /hello, /auth/logout, /auth/post-logout
+          policy: permit
+        sats-authenticated:
+          paths: /*
+          policy: authenticated
+  keycloak:
+    devservices:
+      enabled: false
   # https://docs.quarkiverse.io/quarkus-vault/dev/index.html
   vault:
     url: ${SATS_OPENBAO_ADDR}

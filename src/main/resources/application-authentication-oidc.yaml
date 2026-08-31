@@ -1,0 +1,18 @@
+quarkus:
+  # https://quarkus.io/guides/security-oidc-configuration-properties-reference/
+  oidc:
+    enabled: true
+    # service (default), web-app, hybrid
+    application-type: web-app
+    auth-server-url: ${SATS_OIDC_ISSUER}
+    # use endpoint discovery, or configure OIDC endpoints individually (see `token-path`)
+    discovery-enabled: true
+    client-id: sats-client
+    authentication:
+      # Use specific redirect path to avoid wildcard redirect path
+      # so the IdP can be configured to allow limited redirect paths.
+      redirect-path: /auth/callback
+      restore-path-after-redirect: true
+    logout:
+      path: /auth/logout
+      post-logout-path: /auth/post-logout
