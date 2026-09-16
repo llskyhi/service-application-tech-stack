@@ -2,7 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "es6",
-    "moduleResolution": "bundler",
+    "moduleResolution": "bundler"
   },
   "extends": "./.quasar/tsconfig.json"
 }
