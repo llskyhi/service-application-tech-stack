@@ -13,6 +13,7 @@
 
         <q-toolbar-title> Quasar App </q-toolbar-title>
 
+        <LocaleSelect />
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
@@ -42,6 +43,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import EssentialLink, { type EssentialLinkProps } from '@/components/EssentialLink.vue';
+import LocaleSelect from '@/components/LocaleSelect.vue';
 
 const linksList: EssentialLinkProps[] = [
   {
