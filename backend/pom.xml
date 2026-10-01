@@ -109,6 +109,13 @@
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.platform.version}</version>
                 <extensions>true</extensions>
+                <!--
+                    To share dotenv file between multiple components, set Quarkus working directory to where dotenv file locates.
+                    https://quarkus.io/guides/quarkus-maven-plugin/#quarkusdev
+                -->
+                <configuration>
+                    <workingDir>${project.basedir}/..</workingDir>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
